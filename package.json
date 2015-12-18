@@ -1,0 +1,52 @@
+{
+  "name": "angular-es6-seed",
+  "version": "0.1.0",
+  "description": "Angular ES6 seed - Gulp, etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "security": "snyk test",
+    "bump": "bump --prompt",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCotton/angular-es6-seed.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Andy Walpole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TCotton/angular-es6-seed/issues"
+  },
+  "homepage": "https://github.com/TCotton/angular-es6-seed#readme",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-aria": "^1.4.8",
+    "angular-formly": "^7.3.9",
+    "angular-new-router": "^0.5.3",
+    "angular-resource": "^1.4.8",
+    "angular-sanitize": "^1.4.8",
+    "api-check": "^7.5.5",
+    "lodash": "^3.10.1",
+    "moment": "^2.10.6"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.4.8",
+    "astrolabe": "^0.3.6",
+    "cz-conventional-changelog": "^1.1.5",
+    "gulp": "^3.9.0",
+    "gulp-conventional-changelog": "^0.7.0",
+    "imagemin": "^4.0.0",
+    "imagemin-mozjpeg": "^5.1.0",
+    "ng-describe": "^1.6.0",
+    "snyk": "^1.8.2",
+    "version-bump-prompt": "^1.5.2"
+  },
+  "engines": {
+    "node": ">=0.4.0",
+    "npm": ">=3.5.0"
+  }
+}
