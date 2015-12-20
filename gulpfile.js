@@ -5,6 +5,10 @@
 // sudo npm install -g conventional-changelog
 // sudo npm install -g modernizr
 //  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
+
+// sudo npm install -g mozjpeg
+// sudo npm install -g jspm
+
 'use strict';
 // gulp-ng-annotate
 const gulp = require('gulp');

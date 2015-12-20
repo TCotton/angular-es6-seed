@@ -6,10 +6,10 @@
   "scripts": {
     "security": "snyk test",
     "bump": "bump --prompt",
-    "modernizr": "modernizr -c modernizr-config.json -d ./src/js/vendor/modernizr.js",
+    "modernizr": "modernizr -c modernizr-config.json -d ./src/app/common/vendor/modernizr.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
-    "start": "npm install && npm run modernizr",
-    "clean": "rm -r node_modules && rm -r src/js/vendor"
+    "start": "npm install && jspm install && jspm dl-loader && npm run modernizr",
+    "clean": "rm -r node_modules && rm -r src/app/common/vendor && rm -r jspm_packages"
   },
   "repository": {
     "type": "git",
@@ -32,13 +32,13 @@
     "angular-resource": "^1.4.8",
     "angular-route": "^1.4.8",
     "angular-sanitize": "^1.4.8",
-    "api-check": "^7.5.5",
     "lodash": "^3.10.1",
     "modernizr": "^3.2.0",
     "moment": "^2.10.6"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.8",
+    "api-check": "^7.5.5",
     "astrolabe": "^0.3.6",
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.1",
@@ -88,11 +88,21 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "src/index.html",
+      "baseURL": "dist",
+      "lib": "src",
       "packages": "jspm_packages"
     },
     "configFile": "jspm-config.js",
-    "dependencies": {},
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.8",
+      "angular-aria": "github:angular/bower-angular-aria@^1.4.8",
+      "angular-formly": "github:formly-js/angular-formly@^7.3.9",
+      "angular-resource": "github:angular/bower-angular-resource@^1.4.8",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.8",
+      "lodash": "npm:lodash@^3.10.1",
+      "lookfirst/oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@^1.2.2",
+      "moment": "npm:moment@^2.10.6"
+    },
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
