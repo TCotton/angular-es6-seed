@@ -85,5 +85,18 @@
   "engines": {
     "node": ">=0.4.0",
     "npm": ">=3.5.0"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src/index.html",
+      "packages": "jspm_packages"
+    },
+    "configFile": "jspm-config.js",
+    "dependencies": {},
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
   }
 }
