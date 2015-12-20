@@ -6,10 +6,10 @@
   "scripts": {
     "security": "snyk test",
     "bump": "bump --prompt",
-    "modernizr": "modernizr -c modernizr-config.json -d ./src/app/common/vendor/modernizr.js",
+    "modernizr": "modernizr -c modernizr-config.json -d ./src/assets/vendor/modernizr.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "start": "npm install && jspm install && jspm dl-loader && npm run modernizr",
-    "clean": "rm -r node_modules && rm -r src/app/common/vendor && rm -r jspm_packages"
+    "clean": "rm -r node_modules && rm -r src/assets/vendor/ && rm -r jspm_packages"
   },
   "repository": {
     "type": "git",

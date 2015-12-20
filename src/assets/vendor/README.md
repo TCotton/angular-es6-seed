@@ -1,0 +1,1 @@
+any non-Angular scripts, such as Modernizr, can be placed here

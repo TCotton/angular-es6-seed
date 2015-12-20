@@ -1,0 +1,1 @@
+directives common to all components
