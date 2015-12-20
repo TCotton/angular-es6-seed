@@ -19,12 +19,17 @@ const plugins = require('gulp-load-plugins')();
 const devPath = './gulp/gulp-development/';
 const prodPath = './gulp/gulp-production/';
 
+const filePaths = {
+  output: 'dist/',
+  sass: 'src/assets/styles/main.scss'
+};
+
 let getDevTask = function getTask(task) {
-  return require(devPath + task)(gulp, plugins);
+  return require(devPath + task)(gulp, plugins, filePaths);
 };
 
 let getProdTask = function getTask(task) {
-  return require(prodPath + task)(gulp, plugins);
+  return require(prodPath + task)(gulp, plugins, filePaths);
 };
 
 gulp.task('sass', getDevTask('gulp-sass'));
