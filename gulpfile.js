@@ -6,7 +6,7 @@
 // sudo npm install -g modernizr
 //  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 'use strict';
-
+// gulp-ng-annotate
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
