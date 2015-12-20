@@ -17,7 +17,7 @@
     @return 6;
   } @else if $baseFS == 43.8% {
     @return 7;
-  } @else if $baseFS == 50.0% {
+  } @else if $baseFS == 50% {
     @return 8;
   } @else if $baseFS == 56.3% {
     @return 9;
@@ -25,7 +25,7 @@
     @return 10;
   } @else if $baseFS == 68.8% {
     @return 11;
-  } @else if $baseFS == 75.0% {
+  } @else if $baseFS == 75% {
     @return 12;
   } @else if $baseFS == 81.3% {
     @return 13;
@@ -33,7 +33,7 @@
     @return 14;
   } @else if $baseFS == 93.8% {
     @return 15;
-  } @else if $baseFS == 100.0% {
+  } @else if $baseFS == 100% {
     @return 16;
   }
 

@@ -40,7 +40,6 @@
     "angular-mocks": "^1.4.8",
     "api-check": "^7.5.5",
     "astrolabe": "^0.3.6",
-    "autoprefixer": "^6.2.0",
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.1",
     "css-mqpacker": "^4.0.0",
@@ -91,9 +90,9 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "./dist",
+      "baseURL": "dist",
       "lib": "./src",
-      "packages": "./jspm_packages"
+      "packages": "jspm_packages"
     },
     "configFile": "jspm-config.js",
     "dependencies": {
