@@ -9,7 +9,7 @@
     "modernizr": "modernizr -c modernizr-config.json -d ./src/assets/vendor/modernizr.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
     "start": "npm install && jspm install && jspm dl-loader && npm run modernizr",
-    "clean": "rm -r node_modules && rm -r src/assets/vendor/ && rm -r jspm_packages"
+    "clean": "rm -r node_modules && rm -r src/assets/vendor/ && rm -r jspm_packages && rm -r dist"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "angular-mocks": "^1.4.8",
     "api-check": "^7.5.5",
     "astrolabe": "^0.3.6",
+    "autoprefixer": "^6.2.0",
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.1",
     "css-mqpacker": "^4.0.0",
@@ -78,6 +79,7 @@
     "jshint": "^2.8.0",
     "jspm": "^0.16.19",
     "ng-describe": "^1.6.0",
+    "postcss-fakeid": "^1.0.2",
     "sass-lint": "^1.4.0",
     "snyk": "^1.8.2",
     "susy": "^2.2.9",
@@ -89,9 +91,9 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "dist",
-      "lib": "src",
-      "packages": "jspm_packages"
+      "baseURL": "./dist",
+      "lib": "./src",
+      "packages": "./jspm_packages"
     },
     "configFile": "jspm-config.js",
     "dependencies": {

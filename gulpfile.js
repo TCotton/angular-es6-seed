@@ -1,9 +1,3 @@
-/**
- * Created by andywalpole on 18/12/2015.
- */
-// sudo npm install -g commitizen
-// sudo npm install -g conventional-changelog
-// sudo npm install -g modernizr
 //  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 
 // sudo npm install -g mozjpeg
@@ -16,12 +10,13 @@
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
-const devPath = './gulp/gulp-development/';
-const prodPath = './gulp/gulp-production/';
+const devPath = './gulp/gulp-dev/';
+const prodPath = './gulp/gulp-prod/';
 
 const filePaths = {
   output: 'dist/',
-  sass: 'src/assets/styles/main.scss'
+  sassInput: 'src/assets/styles/',
+  sassOut: 'dist/assets/styles/',
 };
 
 let getDevTask = function getTask(task) {
@@ -34,12 +29,8 @@ let getProdTask = function getTask(task) {
 
 gulp.task('sass', getDevTask('gulp-sass'));
 
-gulp.task('default', function() {
-  return gulp.src('CHANGELOG.md', {
-      buffer: false
-    })
-    .pipe(conventionalChangelog({
-      preset: 'angular'
-    }))
-    .pipe(gulp.dest('./'));
+gulp.task('sass:watch', function() {
+  gulp.watch(filePaths.sassInput + '*.scss', ['sass']);
 });
+
+gulp.task('default', ['sass', 'sass:watch']);
