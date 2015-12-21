@@ -1,5 +1,13 @@
 module.exports = function(gulp, plugins, filePaths) {
   'use strict';
+  /**
+   * SASS | CSS
+   * && writes sourcemap
+   * && lints SASS file
+   * && adds vendor prefixes for the previous two versions of Chrome
+   * maxBuffer set to Infinity to avoid a gulp crash
+   * Using Gulp-changed it only checks files that have changed
+   */
   return function() {
     gulp.src(filePaths.sassInput + '*.scss')
       .pipe(plugins.sourcemaps.init())

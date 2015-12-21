@@ -99,7 +99,7 @@
       @content;
     }
   } @else if $name == "retina" {
-    // check that this works
+    // check that this works here
     @media (-webkit-min-device-pixel-ratio: 2), not all, (min-resolution: 2dppx), (min-resolution: 192dpi) {
       @content;
     }
