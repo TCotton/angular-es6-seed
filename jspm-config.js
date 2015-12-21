@@ -1,4 +1,5 @@
 // jscs:disable
+/* jshint ignore:start */
 System.config({
   baseURL: ".",
   defaultJSExtensions: true,
@@ -6,12 +7,15 @@ System.config({
   babelOptions: {
     "optional": [
       "runtime",
-      "optimisation.modules.system"
-    ]
+      "optimisation.modules.system",
+    ],
+    "plugins": [
+      "transform-es2015-modules-systemjs",
+    ],
   },
   paths: {
     "github:*": "../jspm_packages/github/*",
-    "npm:*": "../jspm_packages/npm/*"
+    "npm:*": "../jspm_packages/npm/*",
   },
 
   map: {
@@ -31,13 +35,13 @@ System.config({
     "moment": "npm:moment@2.10.6",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:angular-ui/ui-router@0.2.15": {
-      "angular": "github:angular/bower-angular@1.4.8"
+      "angular": "github:angular/bower-angular@1.4.8",
     },
     "github:angular/bower-angular-aria@1.4.8": {
-      "angular": "github:angular/bower-angular@1.4.8"
+      "angular": "github:angular/bower-angular@1.4.8",
     },
     "github:angular/bower-angular-resource@1.4.8": {
-      "angular": "github:angular/bower-angular@1.4.8"
+      "angular": "github:angular/bower-angular@1.4.8",
     },
     "github:angular/bower-angular-sanitize@1.4.8": {
       "angular": "github:angular/bower-angular@1.4.8"
@@ -93,3 +97,4 @@ System.config({
     }
   }
 });
+/* jshint ignore:end */

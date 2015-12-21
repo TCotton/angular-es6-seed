@@ -1,11 +1,5 @@
-//  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
-
-// sudo npm install -g mozjpeg
-// sudo npm install jspm/jspm-cli -g
-
 'use strict';
-
-// gulp-ng-annotate
+//  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();

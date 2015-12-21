@@ -41,6 +41,7 @@
     "angular-mocks": "^1.4.8",
     "api-check": "^7.5.5",
     "astrolabe": "^0.3.6",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.3.13",
     "browser-sync": "^2.10.1",
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.1",
@@ -94,7 +95,7 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "./dist",
+      "baseURL": "dist",
       "lib": "./src",
       "packages": "jspm_packages"
     },
