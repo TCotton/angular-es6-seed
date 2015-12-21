@@ -1,7 +1,7 @@
 //  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 
 // sudo npm install -g mozjpeg
-// sudo npm install -g jspm
+// sudo npm install jspm/jspm-cli -g
 
 'use strict';
 
@@ -18,7 +18,9 @@ const filePaths = {
   sassInput: 'src/assets/styles/',
   sassOut: 'dist/assets/styles/',
   jsInput: 'src/app/**/*.js',
-  jsOut: 'src/app/'
+  jsOut: 'src/app/',
+  configInput: 'src/common/json/config.json',
+  configOut: 'dist/app/config/',
 };
 
 let getDevTask = function getTask(task) {
@@ -32,6 +34,7 @@ let getProdTask = function getTask(task) {
 gulp.task('sassDev', getDevTask('gulp-sass'));
 gulp.task('jsJshintDev', getDevTask('gulp-jshint'));
 gulp.task('jsJscsDev', getDevTask('gulp-jscs'));
+gulp.task('constants', getDevTask('gulp-create-constants'));
 
 gulp.task('jsJshint:watch', function() {
   gulp.watch(filePaths.jsInput, ['jsJshintDev']);
@@ -45,4 +48,4 @@ gulp.task('sassDev:watch', function() {
   gulp.watch(filePaths.jsInput, ['jsJscsDev']);
 });
 
-gulp.task('default', ['sassDev', 'sassDev:watch', 'jsJshint:watch', 'jsJscs:watch']);
+gulp.task('default', ['sassDev', 'constants', 'sassDev:watch', 'jsJshint:watch', 'jsJscs:watch']);

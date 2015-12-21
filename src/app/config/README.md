@@ -1,0 +1,1 @@
+In here is placed CONSTANTS created from the JSON files in teh src/common/json folder

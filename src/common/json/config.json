@@ -1,0 +1,11 @@
+{
+  "name": "AppConstants",
+  "wrap": "commonjs",
+  "constants": {
+    "BASIC_INFO": {
+      "TITLE": "An Angular platform built to work with ES6, SystemJS and JSPM",
+      "DESCRIPTION": "Uses Angular 1 but attempts to allow the developer easier access to latest JavaScript code advances",
+      "GITHUB": "https://github.com/TCotton/angular-es6-seed"
+    }
+  }
+}

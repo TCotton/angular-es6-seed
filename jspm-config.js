@@ -1,3 +1,4 @@
+// jscs:disable
 System.config({
   baseURL: ".",
   defaultJSExtensions: true,
@@ -22,9 +23,13 @@ System.config({
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
+    "css": "github:systemjs/plugin-css@0.1.20",
+    "image": "github:systemjs/plugin-image@0.1.0",
+    "json": "github:systemjs/plugin-json@0.1.0",
     "lodash": "npm:lodash@3.10.1",
     "lookfirst/oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.2.2",
     "moment": "npm:moment@2.10.6",
+    "text": "github:systemjs/plugin-text@0.0.4",
     "github:angular-ui/ui-router@0.2.15": {
       "angular": "github:angular/bower-angular@1.4.8"
     },
