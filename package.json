@@ -21,7 +21,8 @@
     "bundleSFX": "jspm bundle-sfx src/app/app.js src/app/app/app.bundle.js --inject",
     "bundleSFXMinify": "jspm bundle-sfx src/app/ app.js src/app/app/app.bundle.js --inject --minify",
     "bundleSFXMinifyAlt": "jspm bundle-sfx src/app/app.js src/app/app/app.bundle.js --inject --minify --no-mangle",
-    "depcache": "jspm depcache src/app/app.js jspm install"
+    "depcache": "jspm depcache src/app/app.js jspm install",
+    "server": "jspm-server src"
   },
   "repository": {
     "type": "git",
@@ -40,8 +41,6 @@
   "devDependencies": {
     "api-check": "^7.5.5",
     "astrolabe": "^0.3.6",
-    "babel-plugin-transform-es2015-modules-systemjs": "^6.3.13",
-    "browser-sync": "^2.10.1",
     "commitizen": "^2.4.6",
     "conventional-changelog": "^0.5.1",
     "css-mqpacker": "^4.0.0",
@@ -77,6 +76,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svgmin": "^1.2.0",
     "gulp-uglify": "^1.5.1",
+    "http-server": "^0.8.5",
     "imagemin": "^4.0.0",
     "imagemin-mozjpeg": "^5.1.0",
     "jasmine-core": "^2.4.1",

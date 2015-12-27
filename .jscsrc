@@ -71,6 +71,6 @@
   "safeContextKeyword": "_this",
   "validateLineBreaks": "LF",
   "validateQuoteMarks": { "mark": "'", "escape": true },
-  "excludeFiles": ["node_modules/**", "jspm-config.js", "src/jspm_packages" ],
+  "excludeFiles": ["node_modules/**", "src/jspm-config.js", "src/jspm_packages" ],
   "validateIndentation": 2
 }

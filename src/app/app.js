@@ -1,6 +1,6 @@
 'use strict';
 import angular from 'angular';
-import router from 'oclazyload-systemjs-router';
+import router from 'lookfirst/oclazyload-systemjs-router';
 import futureRoutes from 'app/routes.json!';
 
 let appModule = angular.module('app', []);
@@ -18,8 +18,8 @@ appModule.config(function($locationProvider, $httpProvider, $urlRouterProvider) 
 
 angular.element(document).ready(function() {
   // app.showModuleRelationships();
-  return angular.bootstrap(document.body, [appModule.name], {
-    strictDi: true,
+  return angular.bootstrap(document.body, ['app'], {
+    strictDi: false,
   });
 });
 

@@ -4,11 +4,8 @@ System.config({
   babelOptions: {
     "optional": [
       "runtime",
-      "optimisation.modules.system"
+      "optimisation.modules.system",
     ],
-    "plugins": [
-      "transform-es2015-modules-systemjs"
-    ]
   },
   paths: {
     "github:*": "jspm_packages/github/*",
