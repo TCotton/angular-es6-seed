@@ -9,6 +9,7 @@
   "node": true,
   "browser": true,
   "globals": {
+    "System": true,
     "require": true,
     "module": true,
     "sinon": true,

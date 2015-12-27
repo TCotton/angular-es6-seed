@@ -1,0 +1,1 @@
+Optimised images go in this directory

@@ -6,7 +6,7 @@
     console.log('normalize: ' + JSON.stringify({
         name: name,
         parentName: parentName,
-        parentAddress: parentAddress
+        parentAddress: parentAddress,
       }));
     return normalize.call(this, name, parentName, parentAddress);
   };
