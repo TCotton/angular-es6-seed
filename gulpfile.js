@@ -10,11 +10,11 @@ const prodPath = './gulp/gulp-prod/';
 const filePaths = {
   output: 'dist/',
   sassInput: 'src/assets/styles/',
-  sassOut: 'dist/assets/styles/',
+  sassOut: 'src/assets/styles/',
   jsInput: 'src/app/**/*.js',
   jsOut: 'src/app/',
   configInput: 'src/common/json/config.json',
-  configOut: 'dist/app/config/',
+  configOut: 'src/app/config/',
 };
 
 let getDevTask = function getTask(task) {
