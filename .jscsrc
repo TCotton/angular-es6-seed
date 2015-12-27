@@ -26,7 +26,6 @@
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
   "requireTrailingComma": { "ignoreSingleLine": true },
-  "requireSpaceAfterComma": true,
   "disallowYodaConditions": true,
   "disallowKeywords": [ "with" ],
   "disallowKeywordsOnNewLine": ["else"],
@@ -71,7 +70,7 @@
   "requireSemicolons": true,
   "safeContextKeyword": "_this",
   "validateLineBreaks": "LF",
-  "validateQuoteMarks": { "mark": "'", "escape": true, "ignoreJSX": true },
-  "excludeFiles": ["node_modules/**", "jspm_packages/**" ],
+  "validateQuoteMarks": { "mark": "'", "escape": true },
+  "excludeFiles": ["node_modules/**", "jspm-config.js", "src/jspm_packages" ],
   "validateIndentation": 2
 }

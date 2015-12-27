@@ -1,27 +1,24 @@
-// jscs:disable
-/* jshint ignore:start */
 System.config({
-  baseURL: ".",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {
     "optional": [
       "runtime",
-      "optimisation.modules.system",
+      "optimisation.modules.system"
     ],
     "plugins": [
-      "transform-es2015-modules-systemjs",
-    ],
+      "transform-es2015-modules-systemjs"
+    ]
   },
   paths: {
-    "github:*": "../jspm_packages/github/*",
-    "npm:*": "../jspm_packages/npm/*",
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
-
   map: {
     "angular": "github:angular/bower-angular@1.4.8",
     "angular-aria": "github:angular/bower-angular-aria@1.4.8",
     "angular-formly": "github:formly-js/angular-formly@7.3.9",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.4.8",
     "angular-resource": "github:angular/bower-angular-resource@1.4.8",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.8",
     "babel": "npm:babel-core@5.8.34",
@@ -35,13 +32,16 @@ System.config({
     "moment": "npm:moment@2.10.6",
     "text": "github:systemjs/plugin-text@0.0.4",
     "github:angular-ui/ui-router@0.2.15": {
-      "angular": "github:angular/bower-angular@1.4.8",
+      "angular": "github:angular/bower-angular@1.4.8"
     },
     "github:angular/bower-angular-aria@1.4.8": {
-      "angular": "github:angular/bower-angular@1.4.8",
+      "angular": "github:angular/bower-angular@1.4.8"
+    },
+    "github:angular/bower-angular-mocks@1.4.8": {
+      "angular": "github:angular/bower-angular@1.4.8"
     },
     "github:angular/bower-angular-resource@1.4.8": {
-      "angular": "github:angular/bower-angular@1.4.8",
+      "angular": "github:angular/bower-angular@1.4.8"
     },
     "github:angular/bower-angular-sanitize@1.4.8": {
       "angular": "github:angular/bower-angular@1.4.8"
@@ -97,4 +97,3 @@ System.config({
     }
   }
 });
-/* jshint ignore:end */

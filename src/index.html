@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head ng-app="myApp">
+<head>
   <meta charset="UTF-8">
   <title ng-bind="pageTitle"></title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <base href="/"/>
+
+  <link rel="stylesheet" href="assets/styles/main.css">
+  <script type="text/javascript" src="jspm_packages/system.js"></script>
+  <script type="text/javascript" src="jspm-config.js"></script>
+  <script type="text/javascript">
+    System.import('app/app.js');
+  </script>
 </head>
 <body ng-cloak>
 
 <ui-view class="content-area"></ui-view>
 
-<script type="text/javascript" src="jspm_packages/system.js"></script>
-<script type="text/javascript" src="jspm-config.js"></script>
-<script type="text/javascript">
-  System.import('app/app');
-</script>
 </body>
 </html>
