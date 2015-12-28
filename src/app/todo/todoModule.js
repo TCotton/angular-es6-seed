@@ -1,32 +1,32 @@
 import angular from 'angular';
 import appModule from 'app/app';
-import todoTpl from 'app/todo/todo.tpl';
+import todoTpl from 'app/todo/todo.tpl.html!text';
 
-let todoModule = angular.module('todomvc', [appModule.name, todoTpl.name]);
+let todoModule = angular.module('todomvc', [appModule.name]);
 
-todoModule.config(function($stateProvider) {
+todoModule.config(['$stateProvider', function($stateProvider) {
 
   $stateProvider
     .state('todo', {
       url: '/todo',
-      templateUrl: todoTpl.name,
+      template: todoTpl,
       controller: 'TodoCtrl',
     })
     .state('todo.all', {
       url: '/all',
-      templateUrl: todoTpl.name,
+      template: todoTpl,
       controller: 'TodoCtrl',
     })
     .state('todo.completed', {
       url: '/completed',
-      templateUrl: todoTpl.name,
+      template: todoTpl,
       controller: 'TodoCtrl',
     })
     .state('todo.active', {
       url: '/active',
-      templateUrl: todoTpl.name,
+      templat: todoTpl,
       controller: 'TodoCtrl',
     });
-});
+}]);
 
 export default todoModule;

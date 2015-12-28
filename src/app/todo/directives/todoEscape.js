@@ -3,6 +3,8 @@ import todoModule from '../todoModule';
 /**
  * Directive that executes an expression when the element it is applied to gets
  * an `escape` keydown event.
+ * appModule.config(['$locationProvider', '$httpProvider', '$urlRouterProvider',
+ * function($locationProvider, $httpProvider, $urlRouterProvider) {
  */
 todoModule.directive('todoEscape', function() {
   var ESCAPE_KEY = 27;
