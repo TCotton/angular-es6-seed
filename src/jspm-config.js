@@ -25,13 +25,11 @@ System.config({
     },
     "github:angular-ui/ui-router@0.2.15/angular-ui-router": {
       "deps": [
-        "angular",
         "angular"
       ]
     },
     "github:angular/bower-angular-aria@1.4.8/angular-aria": {
       "deps": [
-        "angular",
         "angular"
       ]
     },
@@ -42,7 +40,6 @@ System.config({
     },
     "github:angular/bower-angular-sanitize@1.4.8/angular-sanitize": {
       "deps": [
-        "angular",
         "angular"
       ]
     },
@@ -73,6 +70,7 @@ System.config({
     "lodash": "npm:lodash@3.10.1",
     "lookfirst/oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.2.2",
     "moment": "npm:moment@2.10.6",
+    "oclazyload": "npm:oclazyload@1.0.9",
     "text": "github:systemjs/plugin-text@0.0.4",
     "todomvc-app-css": "npm:todomvc-app-css@2.0.3",
     "todomvc-common": "npm:todomvc-common@1.0.2",
@@ -199,6 +197,12 @@ System.config({
     },
     "npm:moment@2.10.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
+    },
+    "npm:oclazyload@1.0.9": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "util": "github:jspm/nodelibs-util@0.1.0"
     },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"

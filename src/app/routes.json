@@ -1,0 +1,8 @@
+[
+  {
+    "stateName": "todo",
+    "urlPrefix": "/",
+    "type": "load",
+    "src": "/app/todo/index.js"
+  }
+]

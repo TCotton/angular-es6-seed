@@ -1,5 +1,6 @@
 'use strict';
 import angular from 'angular';
+import '../../modules.js';
 
 export default class Store {
 
@@ -74,3 +75,6 @@ export default class Store {
 
 }
 
+export default angular.module('app.todoService').factory('localStorage', [function($q) {
+  return new Store($q);
+},]);

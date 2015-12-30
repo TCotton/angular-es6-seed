@@ -1,6 +1,7 @@
 /*global angular */
 'use strict';
 import angular from 'angular';
+import '../../modules.js';
 
 /**
  * Services that persists and retrieves todos from localStorage or a backend API
@@ -10,7 +11,7 @@ import angular from 'angular';
  * model.
  */
 
-export default class ToDoStorage {
+class ToDoStorage {
   constructor($http, $injector) {
     // Detect if an API backend is present. If so, return the API module, else
     // hand off the localStorage adapter
@@ -24,3 +25,7 @@ export default class ToDoStorage {
       });
   }
 }
+
+export default angular.module('app.todoService').factory('todoStorage', ['$http', '$injector', function($http, $injector) {
+  return new ToDoStorage($http, $injector);
+},]);

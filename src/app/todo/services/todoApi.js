@@ -1,7 +1,8 @@
 'use strict';
 import angular from 'angular';
+import '../../modules.js';
 
-export default class Store {
+class Store {
 
   constructor($resource) {
 
@@ -70,3 +71,7 @@ export default class Store {
   }
 
 }
+
+export default angular.module('app.todoService').factory('api', ['$resource', function($resource) {
+  return new Store($resource);
+},]);

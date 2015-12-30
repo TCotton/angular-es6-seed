@@ -62,4 +62,4 @@ System.trace = true;
 
   };
   // create namespace -> change namespace to whatever suits your codebase. Here it is called 'app'
-}((window.app = typeof window.app !== 'undefined' ? window.app : Object.create(Object.prototype)), window));
+}((window.appDebug = typeof window.appDebug !== 'undefined' ? window.appDebug : Object.create(Object.prototype)), window));
