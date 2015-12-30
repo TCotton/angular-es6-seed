@@ -1,0 +1,17 @@
+<footer id="footer" ng-show="todos.length">
+					<span id="todo-count"><strong>{{remainingCount}}</strong>
+						<ng-pluralize count="remainingCount" when="{ one: 'item left', other: 'items left' }"></ng-pluralize>
+					</span>
+  <ul id="filters">
+    <li>
+      <a ng-class="{selected: status == ''} " ui-sref="app.status({status: ''})">All</a>
+    </li>
+    <li>
+      <a ng-class="{selected: status == 'active'}" ui-sref="app.status({status: 'active'})">Active</a>
+    </li>
+    <li>
+      <a ng-class="{selected: status == 'completed'}" ui-sref="app.status({status: 'completed'})">Completed</a>
+    </li>
+  </ul>
+  <button id="clear-completed" ng-click="TCtrl.clearCompletedTodos()" ng-show="completedCount">Clear completed</button>
+</footer>

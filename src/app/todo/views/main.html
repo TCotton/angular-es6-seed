@@ -1,0 +1,17 @@
+<section id="main" ng-show="todos.length">
+  <input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="TCtrl.markAll(allChecked)">
+  <label for="toggle-all">Mark all as complete</label>
+  <ul id="todo-list">
+    <li ng-repeat="todo in todos | filter:statusFilter track by $index" ng-class="{completed: todo.completed, editing: todo == editedTodo}">
+      <div class="view">
+        <input class="toggle" type="checkbox" ng-model="todo.completed" ng-change="TCtrl.toggleCompleted(todo)">
+        <label ng-dblclick="TCtrl.editTodo(todo)">{{todo.title}}</label>
+        <button class="destroy" ng-click="TCtrl.removeTodo(todo)"></button>
+      </div>
+      <form ng-submit="TCtrl.saveEdits(todo, 'submit')">
+        <input class="edit" ng-trim="false" ng-model="todo.title" todo-escape="TCtrl.revertEdits(todo)"
+               ng-blur="TCtrl.saveEdits(todo, 'blur')" todo-focus="todo == editedTodo">
+      </form>
+    </li>
+  </ul>
+</section>

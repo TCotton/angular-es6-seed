@@ -12,6 +12,33 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
 
+  meta: {
+    "github:angular/bower-angular@1.4.8/angular": {
+      "format": "global",
+      "exports": "angular"
+    },
+    "github:angular/bower-angular-mocks@1.4.8/angular-mocks": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "github:angular-ui/ui-router@0.2.15/angular-ui-router": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "github:angular/bower-angular-aria@1.4.8/angular-aria": {
+      "deps": [
+        "angular"
+      ]
+    },
+    "github:christopherthielen/ui-router-extras@0.1.0/ui-router-extras": {
+      "deps": [
+        "angular"
+      ]
+    }
+  },
+
   map: {
     "angular": "github:angular/bower-angular@1.4.8",
     "angular-aria": "github:angular/bower-angular-aria@1.4.8",
@@ -20,6 +47,7 @@ System.config({
     "angular-resource": "github:angular/bower-angular-resource@1.4.8",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.8",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
+    "angular-ui-router-extras": "github:christopherthielen/ui-router-extras@0.1.0",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",
@@ -30,6 +58,8 @@ System.config({
     "lookfirst/oclazyload-systemjs-router": "github:lookfirst/oclazyload-systemjs-router@1.2.2",
     "moment": "npm:moment@2.10.6",
     "text": "github:systemjs/plugin-text@0.0.4",
+    "todomvc-app-css": "npm:todomvc-app-css@2.0.3",
+    "todomvc-common": "npm:todomvc-common@1.0.2",
     "github:angular-ui/ui-router@0.2.15": {
       "angular": "github:angular/bower-angular@1.4.8"
     },
