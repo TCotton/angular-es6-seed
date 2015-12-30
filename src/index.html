@@ -15,7 +15,12 @@
 </head>
 <body ng-cloak>
 
-<ui-view class="content-area"></ui-view>
+<section id="todoapp">
+  <div ui-view="testing"></div>
+  <div ui-view="header"></div>
+  <div ui-view="main"></div>
+  <div ui-view="footer"></div>
+</section>
 
 </body>
 </html>

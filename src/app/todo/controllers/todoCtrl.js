@@ -7,8 +7,9 @@
  */
 
 'use strict';
+import angular from 'angular';
 
-class TodoCtrl {
+export default class TodoCtrl {
 
   constructor($scope, $routeParams, $filter, Store) {
     this.$scope = $scope;
@@ -141,7 +142,3 @@ class TodoCtrl {
     });
   }
 }
-
-angular.module('todomvc').controller('TodoCtrl', ['$scope', '$routeParams', '$filter', 'Store', function ($scope, $routeParams, $filter, Store) {
-  return new TodoCtrl($scope, $routeParams, $filter, Store);
-}]);

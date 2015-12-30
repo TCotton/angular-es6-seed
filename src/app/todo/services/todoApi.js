@@ -1,6 +1,7 @@
 'use strict';
+import angular from 'angular';
 
-class Store {
+export default class Store {
 
   constructor($resource) {
 
@@ -69,7 +70,3 @@ class Store {
   }
 
 }
-
-angular.module('todomvc').factory('api', ['$resource', function($resource) {
-  return new Store($resource);
-}]);

@@ -1,10 +1,12 @@
 /*global angular */
+import angular from 'angular';
+import '../../modules.js';
 
 /**
  * Directive that places focus on the element it is applied to when the
  * expression it binds to evaluates to true
  */
-angular.module('todomvc').directive('todoFocus', ['$timeout', function($timeout) {
+angular.module('app.todoDirective').directive('todoFocus', ['$timeout', function($timeout) {
   'use strict';
 
   return function(scope, elem, attrs) {
@@ -17,6 +19,6 @@ angular.module('todomvc').directive('todoFocus', ['$timeout', function($timeout)
       }
     });
 
-  }
+  };
 
-}]);
+},]);

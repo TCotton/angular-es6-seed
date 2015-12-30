@@ -1,5 +1,7 @@
 'use strict';
-class Store {
+import angular from 'angular';
+
+export default class Store {
 
   constructor($q) {
     this.deferred = $q.defer();
@@ -72,6 +74,3 @@ class Store {
 
 }
 
-angular.module('todomvc').factory('localStorage', function($q) {
-  return new Store($q);
-});

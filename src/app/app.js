@@ -1,10 +1,30 @@
 'use strict';
 import angular from 'angular';
 import 'angular-ui-router';
+import 'angular-aria';
+import 'angular-sanitize';
+import 'api-check';
+import 'angular-formly';
+import '../jspm_packages/npm/todomvc-app-css@2.0.3/index.css!';
+import '../jspm_packages/npm/todomvc-common@1.0.2/base.css!';
 
-let appModule = angular.module('app', ['ui.router']);
+// import 'config/config.js';
 
-appModule.config(['$routeProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', function($routeProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+import './modules.js';
+
+let appModule = angular.module('app', [
+  'app.todoController',
+  'app.todoDirective',
+  'app.todoService',
+  'ui.router',
+  'ngSanitize',
+  'ngAria',
+  'formly'
+]);
+
+import './todo/index.js';
+
+appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', function($locationProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
 
   $locationProvider.html5Mode({
     enabled: true,
@@ -28,16 +48,19 @@ appModule.config(['$routeProvider', '$locationProvider', '$stateProvider', '$url
   };
 
   const views = {
+    testing: {
+      template: '<h1>TESTING!</h1>',
+    },
     header: {
-      templateUrl: 'todo/views/header.html',
+      templateUrl: 'app/todo/views/header.html',
       controller: 'TodoCtrl as TCtrl',
     },
     main: {
-      templateUrl: 'todo/views/main.html',
+      templateUrl: 'app/todo/views/main.html',
       controller: 'TodoCtrl as TCtrl',
     },
     footer: {
-      templateUrl: 'todo/views/footer.html',
+      templateUrl: 'app/todo/views/footer.html',
       controller: 'TodoCtrl as TCtrl',
     },
   };
