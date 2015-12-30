@@ -1,12 +1,8 @@
 import angular from 'angular';
-
 import todoModule from '../todoModule';
 
-/**
- * todoModule.directive('todoFocus', ['$timeout', function($timeout) {
- */
-
 todoModule.factory('todoStorage', ['$q', function($q) {
+
   var STORAGE_ID = 'todos-angularjs-systemjs';
 
   return {
@@ -86,7 +82,7 @@ todoModule.factory('todoStorage', ['$q', function($q) {
     reset: function() {
       this.todos = [];
       localStorage.removeItem(STORAGE_ID);
-    }
+    },
   };
 }]);
 

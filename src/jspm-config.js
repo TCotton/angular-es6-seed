@@ -4,13 +4,14 @@ System.config({
   babelOptions: {
     "optional": [
       "runtime",
-      "optimisation.modules.system",
-    ],
+      "optimisation.modules.system"
+    ]
   },
   paths: {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   map: {
     "angular": "github:angular/bower-angular@1.4.8",
     "angular-aria": "github:angular/bower-angular-aria@1.4.8",
@@ -18,6 +19,7 @@ System.config({
     "angular-mocks": "github:angular/bower-angular-mocks@1.4.8",
     "angular-resource": "github:angular/bower-angular-resource@1.4.8",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.8",
+    "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "babel": "npm:babel-core@5.8.34",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "core-js": "npm:core-js@1.2.6",

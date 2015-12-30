@@ -27,6 +27,7 @@ todoModule.config(['$stateProvider', function($stateProvider) {
       templat: todoTpl,
       controller: 'TodoCtrl',
     });
+
 }]);
 
 export default todoModule;
