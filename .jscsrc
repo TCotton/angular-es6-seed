@@ -25,10 +25,16 @@
   ],
   "disallowMixedSpacesAndTabs": true,
   "disallowTrailingWhitespace": true,
-  "requireTrailingComma": { "ignoreSingleLine": true },
+  "requireTrailingComma": {
+    "ignoreSingleLine": true
+  },
   "disallowYodaConditions": true,
-  "disallowKeywords": [ "with" ],
-  "disallowKeywordsOnNewLine": ["else"],
+  "disallowKeywords": [
+    "with"
+  ],
+  "disallowKeywordsOnNewLine": [
+    "else"
+  ],
   "disallowMultipleLineBreaks": true,
   "disallowMultipleLineStrings": true,
   "disallowMultipleVarDecl": true,
@@ -66,11 +72,25 @@
   "requirePaddingNewLinesBeforeLineComments": {
     "allExcept": "firstAfterCurly"
   },
-  "requirePaddingNewLinesAfterBlocks": true,
+  "requirePaddingNewLinesAfterBlocks": {
+    "allExcept": [
+      "inCallExpressions",
+      "inNewExpressions",
+      "inArrayExpressions",
+      "inProperties"
+    ]
+  },
   "requireSemicolons": true,
   "safeContextKeyword": "_this",
   "validateLineBreaks": "LF",
-  "validateQuoteMarks": { "mark": "'", "escape": true },
-  "excludeFiles": ["node_modules/**", "src/jspm-config.js", "src/jspm_packages" ],
+  "validateQuoteMarks": {
+    "mark": "'",
+    "escape": true
+  },
+  "excludeFiles": [
+    "node_modules/**",
+    "src/jspm-config.js",
+    "src/jspm_packages"
+  ],
   "validateIndentation": 2
 }

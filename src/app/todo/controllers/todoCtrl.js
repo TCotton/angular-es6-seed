@@ -61,6 +61,7 @@ class TodoCtrl {
   editTodo(todo) {
 
     this.$scope.editedTodo = todo;
+
     // Clone the original todo to restore it on demand.
     this.$scope.originalTodo = angular.extend({}, todo);
 
@@ -93,10 +94,11 @@ class TodoCtrl {
     this.store[todo.title ? 'put' : 'delete'](todo)
       .then(function success() {
       }, function error() {
+
         todo.title = this.$scope.originalTodo.title;
       }.bind(this))
       .finally(() => {
-        $scope.editedTodo = null;
+        this.$scope.editedTodo = null;
       });
   }
 

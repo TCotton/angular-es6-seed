@@ -5,8 +5,8 @@ import 'angular-aria';
 import 'angular-sanitize';
 import 'api-check';
 import 'angular-formly';
-import '../jspm_packages/npm/todomvc-app-css@2.0.3/index.css!';
 import '../jspm_packages/npm/todomvc-common@1.0.2/base.css!';
+import '../jspm_packages/npm/todomvc-app-css@2.0.3/index.css!';
 import header from 'app/todo/views/header.html!text';
 import main from 'app/todo/views/main.html!text';
 import footer from 'app/todo/views/footer.html!text';
@@ -19,7 +19,7 @@ import 'app/todo/directives/todoFocus.js';
 
 // import 'config/config.js';
 
-import './modules.js';
+// import './modules.js';
 
 const appModule = angular.module('app', [
   'app.todoController',
@@ -45,12 +45,10 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
       // Get the correct module (API or localStorage).
       return todoStorage.then(function(module) {
 
-        console.log('success');
         module.getStore();
         return module;
       }, function(reason) {
 
-        console.log('failure');
         console.log('Failed: ' + '%0', reason);
       }, function(update) {
 
