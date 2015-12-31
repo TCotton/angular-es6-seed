@@ -90,7 +90,7 @@
   "excludeFiles": [
     "node_modules/**",
     "src/jspm-config.js",
-    "src/jspm_packages"
+    "src/jspm_packages/**"
   ],
   "validateIndentation": 2
 }

@@ -8,6 +8,7 @@ const devPath = './gulp/gulp-dev/';
 const prodPath = './gulp/gulp-prod/';
 
 const filePaths = {
+  base: 'src/app',
   output: 'dist/',
   sassInput: 'src/assets/styles/',
   sassOut: 'src/assets/styles/',
@@ -29,6 +30,7 @@ gulp.task('sassDev', getDevTask('gulp-sass'));
 gulp.task('jsJshintDev', getDevTask('gulp-jshint'));
 gulp.task('jsJscsDev', getDevTask('gulp-jscs'));
 gulp.task('constants', getDevTask('gulp-create-constants'));
+gulp.task('babelDev', getDevTask('gulp-babel'));
 
 gulp.task('jsJshint:watch', function() {
   gulp.watch(filePaths.jsInput, ['jsJshintDev']);

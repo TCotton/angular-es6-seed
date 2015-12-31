@@ -6,7 +6,7 @@ import '../../modules.js';
  * Directive that executes an expression when the element it is applied to gets
  * an `escape` keydown event.
  */
-export default angular.module('app.todoDirective').directive('todoEscape', [function() {
+angular.module('app.todoDirective').directive('todoEscape', [function() {
   'use strict';
 
   var ESCAPE_KEY = 27;

@@ -6,22 +6,27 @@ import 'angular-aria';
 import 'angular-sanitize';
 import 'api-check';
 import 'angular-formly';
+import 'angular-deferred-bootstrap';
+
+// temp TODOMvc css files
 import '../assets/todo/base.css!';
 import '../assets/todo/index.css!';
+
+// templates
 import header from 'app/todo/views/header.html!text';
 import main from 'app/todo/views/main.html!text';
 import footer from 'app/todo/views/footer.html!text';
+
+// TODOMvc components
 import 'app/todo/controllers/todoCtrl.js';
 import 'app/todo/services/todoStorage.js';
 import 'app/todo/services/todoLocalStorage.js';
 import 'app/todo/services/todoApi.js';
 import 'app/todo/directives/todoEscape.js';
 import 'app/todo/directives/todoFocus.js';
-import 'app/todo/index.js';
 
-// import 'config/config.js';
-
-// import './modules.js';
+// constants
+import AppConstants from 'app/config/config.js';
 
 const appModule = angular.module('app', [
   'app.todoController',
@@ -31,6 +36,7 @@ const appModule = angular.module('app', [
   'ngSanitize',
   'ngAria',
   'formly',
+  AppConstants.name,
 ]);
 
 appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider', function($locationProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
@@ -46,7 +52,6 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
     Store: function(todoStorage) {
       // Get the correct module (API or localStorage).
       return todoStorage.then(function(module) {
-
         module.getStore();
         return module;
       }, function(reason) {
@@ -90,11 +95,20 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
 
 },]);
 
-angular.element(document).ready(function() {
-  // appDebug.showModuleRelationships();
-  return angular.bootstrap(document.body, ['app'], {
-    strictDi: true,
-  });
+// use deferredBootstrapper to load constants
+deferredBootstrapper.bootstrap({
+  element: document.body,
+  module: 'app',
+  strictDi: true,
+  resolve: {
+    AppConstants: ['$http', function($http) {
+      return $http.get('/app/config/config.js');
+    }],
+  },
+  onError: function(error) {
+    console.log('Could not bootstrap, error: ' + '\n');
+    console.dir(error);
+  },
 });
 
 export default appModule;
