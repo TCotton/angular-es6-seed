@@ -12,6 +12,12 @@ import '../../modules.js';
 
 class TodoCtrl {
 
+  /**
+   * constructor
+   * @param $scope {object}
+   * @param $filter {function}
+   * @param Store {object}
+   */
   constructor($scope, $filter, Store) {
     this.$scope = $scope;
     this.$filter = $filter;
@@ -36,6 +42,9 @@ class TodoCtrl {
 
   }
 
+  /**
+   *
+   */
   addTodo() {
 
     let newTodo = {
@@ -58,7 +67,12 @@ class TodoCtrl {
 
   }
 
+  /**
+   *
+   * @param todo
+   */
   editTodo(todo) {
+    console.log(typeof todo);
 
     this.$scope.editedTodo = todo;
 
@@ -68,6 +82,8 @@ class TodoCtrl {
   }
 
   saveEdits(todo, event) {
+    console.log(typeof todo);
+    console.log(typeof event);
 
     // Blur events are automatically triggered after the form submit event.
     // This does some unfortunate logic handling to prevent saving twice.
@@ -112,14 +128,18 @@ class TodoCtrl {
   }
 
   removeTodo(todo) {
+    console.log(typeof todo);
     this.store.deleteTodo(todo);
   }
 
   saveTodo(todo) {
+    console.log(typeof todo);
     this.store.put(todo);
   }
 
   toggleCompleted(todo, completed) {
+    console.log(typeof todo);
+    console.log(typeof completed);
 
     if (angular.isDefined(completed)) {
       todo.completed = completed;

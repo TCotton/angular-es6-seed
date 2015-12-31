@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-framework="angularjs">
 <head>
   <meta charset="UTF-8">
   <title ng-bind="pageTitle"></title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<!--
+  <link rel="stylesheet" href="assets/styles/main.css">
+-->
+  <style>[ng-cloak] { display: none; }</style>
   <base href="/"/>
 
-  <!--<link rel="stylesheet" href="assets/styles/main.css">-->
   <script type="text/javascript" src="jspm_packages/system.js"></script>
   <script type="text/javascript" src="jspm-config.js"></script>
   <script src="common/lib/system.yuml.js"></script>
@@ -15,9 +18,9 @@
 <body ng-cloak>
 
 <section id="todoapp">
-  <div ui-view="header"></div>
-  <div ui-view="main"></div>
-  <div ui-view="footer"></div>
+  <ui-view name="header"></ui-view>
+  <ui-view name="main"></ui-view>
+  <ui-view name="footer"></ui-view>
 </section>
 
 <script type="text/javascript">

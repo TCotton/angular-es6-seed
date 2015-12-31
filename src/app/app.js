@@ -1,12 +1,13 @@
 'use strict';
+import '../assets/todo/base.js';
 import angular from 'angular';
 import 'angular-ui-router';
 import 'angular-aria';
 import 'angular-sanitize';
 import 'api-check';
 import 'angular-formly';
-import '../jspm_packages/npm/todomvc-common@1.0.2/base.css!';
-import '../jspm_packages/npm/todomvc-app-css@2.0.3/index.css!';
+import '../assets/todo/base.css!';
+import '../assets/todo/index.css!';
 import header from 'app/todo/views/header.html!text';
 import main from 'app/todo/views/main.html!text';
 import footer from 'app/todo/views/footer.html!text';
@@ -16,6 +17,7 @@ import 'app/todo/services/todoLocalStorage.js';
 import 'app/todo/services/todoApi.js';
 import 'app/todo/directives/todoEscape.js';
 import 'app/todo/directives/todoFocus.js';
+import 'app/todo/index.js';
 
 // import 'config/config.js';
 
@@ -48,10 +50,8 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
         module.getStore();
         return module;
       }, function(reason) {
-
         console.log('Failed: ' + '%0', reason);
       }, function(update) {
-
         console.log('Got notification: ' + '%0', update);
       });
     },
@@ -88,7 +88,7 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise('/');
 
-}]);
+},]);
 
 angular.element(document).ready(function() {
   // appDebug.showModuleRelationships();
