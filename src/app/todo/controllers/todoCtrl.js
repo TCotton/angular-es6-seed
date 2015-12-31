@@ -12,9 +12,8 @@ import '../../modules.js';
 
 class TodoCtrl {
 
-  constructor($scope, $routeParams, $filter, Store) {
+  constructor($scope, $filter, Store) {
     this.$scope = $scope;
-    this.$routeParams = $routeParams;
     this.$filter = $filter;
     this.store = Store;
     this.todos = $scope.todos = Store.store.todos;
@@ -144,6 +143,6 @@ class TodoCtrl {
   }
 }
 
-export default angular.module('app.todoController').controller('TodoCtrl', ['$scope', '$routeParams', '$filter', 'Store', function($scope, $routeParams, $filter, Store) {
-  return new TodoCtrl($scope, $routeParams, $filter, Store);
+export default angular.module('app.todoController').controller('TodoCtrl', ['$scope', '$filter', 'Store', function($scope, $filter, Store) {
+  return new TodoCtrl($scope, $filter, Store);
 },]);

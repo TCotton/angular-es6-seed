@@ -2,7 +2,7 @@
 import angular from 'angular';
 import '../../modules.js';
 
-export default class Store {
+class Store {
 
   constructor($q) {
     this.deferred = $q.defer();
@@ -75,6 +75,6 @@ export default class Store {
 
 }
 
-export default angular.module('app.todoService').factory('localStorage', [function($q) {
+export default angular.module('app.todoService').factory('localStorage', ['$q', function($q) {
   return new Store($q);
 },]);

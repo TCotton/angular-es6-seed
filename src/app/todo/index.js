@@ -9,9 +9,17 @@ import todoFocus from './directives/todoFocus.js';
 import header from 'app/todo/views/header.html!text';
 import main from 'app/todo/views/main.html!text';
 import footer from 'app/todo/views/footer.html!text';
+import appModule from 'app/app';
+
+/*
+console.log(todoEscape.name);
+console.log(localStorage.name);
+console.log(todoStorage.name);
+console.dir(todoStorage);
+*/
 
 export default angular
-  .module('todo', [
+  .module(appModule.name, [
     todoEscape.name,
     todoFocus.name,
     api.name,

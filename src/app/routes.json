@@ -1,6 +1,6 @@
 [
   {
-    "stateName": "todo",
+    "stateName": "app",
     "urlPrefix": "/",
     "type": "load",
     "src": "/app/todo/index.js"
