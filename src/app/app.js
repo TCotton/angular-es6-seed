@@ -12,10 +12,7 @@ import 'angular-deferred-bootstrap';
 import '../assets/todo/base.css!';
 import '../assets/todo/index.css!';
 
-// templates
-import header from 'app/todo/views/header.html!text';
-import main from 'app/todo/views/main.html!text';
-import footer from 'app/todo/views/footer.html!text';
+import { appViews } from './templates.js';
 
 // TODOMvc components
 import 'app/todo/controllers/todoCtrl.js';
@@ -62,31 +59,16 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
     },
   };
 
-  const views = {
-    header: {
-      template: header,
-      controller: 'TodoCtrl as TCtrl',
-    },
-    main: {
-      template: main,
-      controller: 'TodoCtrl as TCtrl',
-    },
-    footer: {
-      template: footer,
-      controller: 'TodoCtrl as TCtrl',
-    },
-  };
-
   $stateProvider
     .state('app', {
       url: '/',
-      views: views,
+      views: appViews,
       resolve: resolve,
     })
     .state('app.status', {
       parent: 'app',
       url: ':status',
-      views: views,
+      views: appViews,
       resolve: resolve,
     });
 
