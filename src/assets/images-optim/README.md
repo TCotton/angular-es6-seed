@@ -1,1 +1,1 @@
-Optimised images go in this directory
+All images for the site

@@ -101,9 +101,11 @@ deferredBootstrapper.bootstrap({
   module: 'app',
   strictDi: true,
   resolve: {
-    AppConstants: ['$http', function($http) {
-      return $http.get('/app/config/config.js');
-    }],
+    AppConstants: [
+      '$http', function($http) {
+        return $http.get('/app/config/config.js');
+      },
+    ],
   },
   onError: function(error) {
     console.log('Could not bootstrap, error: ' + '\n');

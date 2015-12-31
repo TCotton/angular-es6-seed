@@ -2,10 +2,21 @@
 //  delete files and folders -> https://github.com/gulpjs/gulp/blob/master/docs/recipes/delete-files-folder.md
 
 const gulp = require('gulp');
-const plugins = require('gulp-load-plugins')();
+const gulpLoadPlugins = require('gulp-load-plugins');
+const plugins = gulpLoadPlugins();
 
 const devPath = './gulp/gulp-dev/';
 const prodPath = './gulp/gulp-prod/';
+
+gulpLoadPlugins({
+  DEBUG: false, // when set to true, the plugin will log info to console. Useful for bug reporting and issue debugging
+  pattern: ['gulp-*', 'gulp.*', 'imagemin-*'], // the glob(s) to search for
+  scope: ['dependencies', 'devDependencies', 'peerDependencies'], // which keys in the config to look within
+  replaceString: /^gulp(-|\.)/, // what to remove from the name of the module when adding it to the context
+  camelize: true, // if true, transforms hyphenated plugins names to camel case
+  lazy: true, // whether the plugins should be lazy loaded on demand
+  rename: {}, // a mapping of plugins to rename
+});
 
 const filePaths = {
   base: 'src/app',
@@ -16,6 +27,8 @@ const filePaths = {
   jsOut: 'src/app/',
   configInput: 'src/common/json/config.json',
   configOut: 'src/app/config/',
+  imageInput: 'src/assets/images/**/*',
+  imageOutput: 'src/assets/images-optim',
 };
 
 let getDevTask = function getTask(task) {
@@ -31,6 +44,7 @@ gulp.task('jsJshintDev', getDevTask('gulp-jshint'));
 gulp.task('jsJscsDev', getDevTask('gulp-jscs'));
 gulp.task('constants', getDevTask('gulp-create-constants'));
 gulp.task('babelDev', getDevTask('gulp-babel'));
+gulp.task('imageOptimise', getDevTask('gulp-images'));
 
 gulp.task('jsJshint:watch', function() {
   gulp.watch(filePaths.jsInput, ['jsJshintDev']);
@@ -44,4 +58,8 @@ gulp.task('sassDev:watch', function() {
   gulp.watch(filePaths.jsInput, ['jsJscsDev']);
 });
 
-gulp.task('default', ['sassDev', 'constants', 'sassDev:watch', 'jsJshint:watch', 'jsJscs:watch']);
+gulp.task('image:watch', function() {
+  gulp.watch(filePaths.imageInput, ['imageOptimise']);
+});
+
+gulp.task('devBuild', ['sassDev:watch', 'jsJshint:watch', 'jsJscs:watch', 'image:watch']);

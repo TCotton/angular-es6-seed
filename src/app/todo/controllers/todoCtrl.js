@@ -87,7 +87,7 @@ class TodoCtrl {
 
     // Blur events are automatically triggered after the form submit event.
     // This does some unfortunate logic handling to prevent saving twice.
-    if (event === 'blur' && $scope.saveEvent === 'submit') {
+    if (event === 'blur' && this.$scope.saveEvent === 'submit') {
       this.$scope.saveEvent = null;
       return;
     }
@@ -118,7 +118,7 @@ class TodoCtrl {
       });
   }
 
-  revertEdits() {
+  revertEdits(todo) {
 
     this.todos[this.todos.indexOf(todo)] = this.$scope.originalTodo;
     this.$scope.editedTodo = null;
@@ -144,6 +144,7 @@ class TodoCtrl {
     if (angular.isDefined(completed)) {
       todo.completed = completed;
     }
+
     this.store.put(todo, this.todos.indexOf(todo))
       .then(function success() {
       }, () => {

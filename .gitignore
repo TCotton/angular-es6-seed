@@ -12,3 +12,4 @@ src/app/config/config.js
 app/*
 src/app/app*.js
 src/app/app.*.js.map
+src/assets/images-optim/*

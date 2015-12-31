@@ -38,7 +38,8 @@
     "CodePenEmbed": false,
     "onmessage": false,
     "postMessage": false,
-    "self": false
+    "self": false,
+    "deferredBootstrapper": true
   },
   "debug": false,
   "devel": false,
