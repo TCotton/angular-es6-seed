@@ -5,7 +5,13 @@ System.config({
     "optional": [
       "runtime",
       "optimisation.modules.system"
-    ]
+    ],
+    "modules": 'system',
+    "moduleIds": false,
+    "comments": true,
+    "compact": false,
+    "externalHelpers": true,
+    "sourceMaps": 'both'
   },
   paths: {
     "github:*": "jspm_packages/github/*",
