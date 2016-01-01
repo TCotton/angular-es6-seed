@@ -1,16 +1,26 @@
 {
   "name": "angular-es6-seed",
   "version": "0.1.0",
-  "description": "Angular ES6 seed - uses Gulp, System.js, ",
+  "description": "Angular ES6 seed -  Gulp, JSPM, System.js, ES6 modules, SASS and SUSY",
+  "author": "Andy Walpole",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TCotton/angular-es6-seed/issues"
+  },
+  "homepage": "https://github.com/TCotton/angular-es6-seed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCotton/angular-es6-seed.git"
+  },
   "main": "index.js",
   "scripts": {
+    "postinstall": "",
     "security": "snyk test",
     "bump": "bump --prompt",
     "modernizr": "modernizr -c modernizr-config.json -d ./src/assets/vendor/modernizr.js",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w",
-    "start:dev": "npm install && jspm install && jspm dl-loader && gulp constants && gulp sassDev && npm run modernizr",
+    "install": "npm install && jspm install && jspm dl-loader && gulp constants && gulp sassDev && npm run modernizr",
     "clean": "rm -r node_modules && rm -r src/assets/vendor/ && rm -r src/jspm_packages && rm -r src/app/config && rm -r src/assets/images-optim",
-    "devServer": "browser-sync start --files 'dist/**/*.html, dist/**/*.css, dist/**/*.js' --server 'dist'",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js --single-run",
     "bundle": "jspm bundle app/app.js dist/app/app.bundle.js",
@@ -24,22 +34,12 @@
     "depcache": "jspm depcache app/app.js jspm install",
     "server": "jspm-server src --only-exts='.jsx'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/TCotton/angular-es6-seed.git"
-  },
   "keywords": [
     "angular",
     "jspm",
     "system.JS",
     "systemjs"
   ],
-  "author": "Andy Walpole",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TCotton/angular-es6-seed/issues"
-  },
-  "homepage": "https://github.com/TCotton/angular-es6-seed#readme",
   "dependencies": {},
   "devDependencies": {
     "api-check": "^7.5.5",

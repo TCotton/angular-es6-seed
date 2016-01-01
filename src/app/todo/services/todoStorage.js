@@ -26,6 +26,6 @@ class ToDoStorage {
   }
 }
 
-export default angular.module('app.todoService').factory('todoStorage', ['$http', '$injector', function($http, $injector) {
+export default angular.module('app.todoService').service('todoStorage', ['$http', '$injector', function($http, $injector) {
   return new ToDoStorage($http, $injector);
 },]);

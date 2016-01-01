@@ -72,6 +72,6 @@ class Store {
 
 }
 
-export default angular.module('app.todoService').factory('api', ['$resource', function($resource) {
+export default angular.module('app.todoService').service('api', ['$resource', function($resource) {
   return new Store($resource);
 },]);

@@ -75,6 +75,6 @@ class Store {
 
 }
 
-export default angular.module('app.todoService').factory('localStorage', ['$q', function($q) {
+export default angular.module('app.todoService').service('localStorage', ['$q', function($q) {
   return new Store($q);
 },]);
