@@ -6,12 +6,12 @@ System.config({
       "runtime",
       "optimisation.modules.system"
     ],
-    "modules": 'system',
+    "modules": "system",
     "moduleIds": false,
     "comments": true,
     "compact": false,
     "externalHelpers": true,
-    "sourceMaps": 'both'
+    "sourceMaps": "both"
   },
   paths: {
     "github:*": "jspm_packages/github/*",
@@ -31,15 +31,11 @@ System.config({
     },
     "github:angular-ui/ui-router@0.2.15/angular-ui-router": {
       "deps": [
-        "angular",
-        "angular",
         "angular"
       ]
     },
     "github:angular/bower-angular-aria@1.4.8/angular-aria": {
       "deps": [
-        "angular",
-        "angular",
         "angular"
       ]
     },
@@ -50,8 +46,6 @@ System.config({
     },
     "github:angular/bower-angular-sanitize@1.4.8/angular-sanitize": {
       "deps": [
-        "angular",
-        "angular",
         "angular"
       ]
     },
@@ -62,8 +56,6 @@ System.config({
     },
     "github:philippd/bower-angular-deferred-bootstrap@0.1.9/angular-deferred-bootstrap": {
       "deps": [
-        "angular",
-        "angular",
         "angular"
       ]
     }
@@ -81,13 +73,8 @@ System.config({
     "angular-ui-router-extras": "github:christopherthielen/ui-router-extras@0.1.0",
     "api-check": "npm:api-check@7.5.5",
     "babel": "npm:babel-core@5.8.34",
-    "babel-plugin-transform-es2015-destructuring": "npm:babel-plugin-transform-es2015-destructuring@6.3.15",
-    "babel-plugin-transform-es2015-modules-commonjs": "npm:babel-plugin-transform-es2015-modules-commonjs@6.3.16",
-    "babel-plugin-transform-es2015-object-super": "npm:babel-plugin-transform-es2015-object-super@6.3.13",
-    "babel-plugin-transform-regenerator": "npm:babel-plugin-transform-regenerator@6.3.26",
     "babel-polyfill": "npm:babel-polyfill@6.3.14",
     "babel-preset-es2015": "npm:babel-preset-es2015@6.3.13",
-    "babel-preset-es2015-loose": "npm:babel-preset-es2015-loose@6.1.4",
     "babel-runtime": "npm:babel-runtime@5.8.34",
     "clean-css": "npm:clean-css@3.4.8",
     "core-js": "npm:core-js@1.2.6",
@@ -337,9 +324,6 @@ System.config({
       "babel-runtime": "npm:babel-runtime@5.8.34",
       "babel-template": "npm:babel-template@6.3.13"
     },
-    "npm:babel-plugin-transform-es2015-constants@6.1.4": {
-      "babel-runtime": "npm:babel-runtime@5.8.34"
-    },
     "npm:babel-plugin-transform-es2015-destructuring@6.3.15": {
       "babel-runtime": "npm:babel-runtime@5.8.34"
     },
@@ -419,28 +403,6 @@ System.config({
       "babel-runtime": "npm:babel-runtime@5.8.34",
       "core-js": "npm:core-js@1.2.6",
       "process": "github:jspm/nodelibs-process@0.1.2"
-    },
-    "npm:babel-preset-es2015-loose@6.1.4": {
-      "babel-plugin-transform-es2015-arrow-functions": "npm:babel-plugin-transform-es2015-arrow-functions@6.3.13",
-      "babel-plugin-transform-es2015-block-scoped-functions": "npm:babel-plugin-transform-es2015-block-scoped-functions@6.3.13",
-      "babel-plugin-transform-es2015-block-scoping": "npm:babel-plugin-transform-es2015-block-scoping@6.3.13",
-      "babel-plugin-transform-es2015-classes": "npm:babel-plugin-transform-es2015-classes@6.3.15",
-      "babel-plugin-transform-es2015-computed-properties": "npm:babel-plugin-transform-es2015-computed-properties@6.3.13",
-      "babel-plugin-transform-es2015-constants": "npm:babel-plugin-transform-es2015-constants@6.1.4",
-      "babel-plugin-transform-es2015-destructuring": "npm:babel-plugin-transform-es2015-destructuring@6.3.15",
-      "babel-plugin-transform-es2015-for-of": "npm:babel-plugin-transform-es2015-for-of@6.3.13",
-      "babel-plugin-transform-es2015-function-name": "npm:babel-plugin-transform-es2015-function-name@6.3.21",
-      "babel-plugin-transform-es2015-literals": "npm:babel-plugin-transform-es2015-literals@6.3.13",
-      "babel-plugin-transform-es2015-modules-commonjs": "npm:babel-plugin-transform-es2015-modules-commonjs@6.3.16",
-      "babel-plugin-transform-es2015-object-super": "npm:babel-plugin-transform-es2015-object-super@6.3.13",
-      "babel-plugin-transform-es2015-parameters": "npm:babel-plugin-transform-es2015-parameters@6.3.26",
-      "babel-plugin-transform-es2015-shorthand-properties": "npm:babel-plugin-transform-es2015-shorthand-properties@6.3.13",
-      "babel-plugin-transform-es2015-spread": "npm:babel-plugin-transform-es2015-spread@6.3.14",
-      "babel-plugin-transform-es2015-sticky-regex": "npm:babel-plugin-transform-es2015-sticky-regex@6.3.13",
-      "babel-plugin-transform-es2015-template-literals": "npm:babel-plugin-transform-es2015-template-literals@6.3.13",
-      "babel-plugin-transform-es2015-typeof-symbol": "npm:babel-plugin-transform-es2015-typeof-symbol@6.3.13",
-      "babel-plugin-transform-es2015-unicode-regex": "npm:babel-plugin-transform-es2015-unicode-regex@6.3.13",
-      "babel-plugin-transform-regenerator": "npm:babel-plugin-transform-regenerator@6.3.26"
     },
     "npm:babel-preset-es2015@6.3.13": {
       "babel-plugin-check-es2015-constants": "npm:babel-plugin-check-es2015-constants@6.3.13",

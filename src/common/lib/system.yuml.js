@@ -42,6 +42,7 @@ System.trace = true;
       })
       .forEach(function(module) {
         let name = displayName(module.name);
+        name = name.substring(name.lastIndexOf('/') + 1, name.length);
 
         let dependencies = module.deps
           .map(function(dependency){

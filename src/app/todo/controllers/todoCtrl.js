@@ -69,10 +69,9 @@ class TodoCtrl {
 
   /**
    *
-   * @param todo
+   * @param todo {object}
    */
   editTodo(todo) {
-    console.log(typeof todo);
 
     this.$scope.editedTodo = todo;
 
@@ -81,9 +80,12 @@ class TodoCtrl {
 
   }
 
+  /**
+   *
+   * @param todo {object}
+   * @param event {string}
+   */
   saveEdits(todo, event) {
-    console.log(typeof todo);
-    console.log(typeof event);
 
     // Blur events are automatically triggered after the form submit event.
     // This does some unfortunate logic handling to prevent saving twice.
@@ -110,7 +112,6 @@ class TodoCtrl {
     this.store[todo.title ? 'put' : 'delete'](todo)
       .then(function success() {
       }, function error() {
-
         todo.title = this.$scope.originalTodo.title;
       }.bind(this))
       .finally(() => {
@@ -118,6 +119,10 @@ class TodoCtrl {
       });
   }
 
+  /**
+   *
+   * @param todo
+   */
   revertEdits(todo) {
 
     this.todos[this.todos.indexOf(todo)] = this.$scope.originalTodo;
@@ -127,8 +132,11 @@ class TodoCtrl {
 
   }
 
+  /**
+   *
+   * @param todo {object}
+   */
   removeTodo(todo) {
-    console.log(typeof todo);
     this.store.deleteTodo(todo);
   }
 
@@ -137,9 +145,13 @@ class TodoCtrl {
     this.store.put(todo);
   }
 
+  /**
+   *
+   * @param todo {object}
+   * @param completed {undefined || object}
+   */
+
   toggleCompleted(todo, completed) {
-    console.log(typeof todo);
-    console.log(typeof completed);
 
     if (angular.isDefined(completed)) {
       todo.completed = completed;
@@ -153,10 +165,17 @@ class TodoCtrl {
 
   }
 
+  /**
+   *
+   */
   clearCompletedTodos() {
     this.store.clearCompleted();
   }
 
+  /**
+   *
+   * @param completed
+   */
   markAll(completed) {
     this.todos.forEach((todo) => {
       if (todo.completed !== completed) {

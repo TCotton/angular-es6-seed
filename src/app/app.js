@@ -13,6 +13,7 @@ import '../assets/todo/base.css!';
 import '../assets/todo/index.css!';
 
 import { appViews } from './templates.js';
+import { appRoutes } from './routes.js';
 
 // TODOMvc components
 import 'app/todo/controllers/todoCtrl.js';
@@ -45,32 +46,7 @@ appModule.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', '
 
   $httpProvider.useApplyAsync(true);
 
-  const resolve = {
-    Store: function(todoStorage) {
-      // Get the correct module (API or localStorage).
-      return todoStorage.then(function(module) {
-        module.getStore();
-        return module;
-      }, function(reason) {
-        console.log('Failed: ' + '%0', reason);
-      }, function(update) {
-        console.log('Got notification: ' + '%0', update);
-      });
-    },
-  };
-
-  $stateProvider
-    .state('app', {
-      url: '/',
-      views: appViews,
-      resolve: resolve,
-    })
-    .state('app.status', {
-      parent: 'app',
-      url: ':status',
-      views: appViews,
-      resolve: resolve,
-    });
+  appRoutes($stateProvider, appViews);
 
   // For any unmatched url, redirect to /state1
   $urlRouterProvider.otherwise('/');
@@ -93,6 +69,10 @@ deferredBootstrapper.bootstrap({
     console.log('Could not bootstrap, error: ' + '\n');
     console.dir(error);
   },
+});
+
+angular.element(document).ready(function() {
+  appDebug.showModuleRelationships();
 });
 
 export default appModule;
